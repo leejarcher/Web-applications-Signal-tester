@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    
+<html>
+  <meta name="viewport" content="width=device-width,
+	initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+  <body onload="scrollTo(0, 1);">
+  <head>
+	<link href="css/index.css" rel="stylesheet">
+	<title> Web applications - Signal tester</title>
+  </head>  
+  <body>
+	<div class="page">
+    
+	  <header role="banner">
+        <h1>
+		  <img src="favicon.ico">
+		  Web Applications
+		</h1>
+	    <nav role="navigation">
+	      <p><a href=waveforms.html>Test the app</a></p>
+	    </nav>
+	  </header>
+	
+	  <main role="main">
+	    <article>
+	      <p>The current application, Signal tester, 
+		  is being written primarily on an Android phone using the 
+	      web audio API to act as a signal generator
+	      along with a peak reading level meter, basic oscilloscope and spectrum analyser.
+	      The generator and analyser use seperate browser windows that are navigated 
+	      between using the buttons at the top of the two screens.</p>
+	      <p>The generator provides the standard waveforms plus a custom and WAV waveform 
+	      option. There are two generators that can be mixed together or waveform 2, at the 
+	      bottom, can amplitude or frequency modulate the top waveform. 
+		  Generator two can additionally take its waveform source from the microphone.</p>
+	      <p>The output level of each oscillator is variable between -10 and +10, with negative values
+	      indicating a phase inversion of 180&deg;.</p>
+	      <p>The two custom waveforms use fourier coefficients to generate the waveforms, additive synthesis, 
+	      with both files holding the coefficients being updateable.
+	      The WAV waveforms, again, can be modified by supplying your own WAV files.</p>
+		  <div class="warning">
+	        <p>WARNING: Please keep the volume low while using this app 
+			  to avoid potential speaker/hearing damage.
+			</p>
+		  </div>
+	    </article>
+	  </main>
+		
+		
+	  <footer role="contentinfo">Contact:-leejarcher@live.co.uk
+        <p><small>&copy; Lee Archer 2017</small></p>
+	  </footer>
+	  
+	</div>
+  </body>
+</html>

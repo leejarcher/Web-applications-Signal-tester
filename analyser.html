@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<!-- SIGNAL TESTER © LEE ARCHER 2017 -->
+<!-- ANALYSER SCREEN -->
+
+<html>
+  <meta name="viewport" content="width=device-width;
+  initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+  <body onload="scrollTo(0, 1);">
+  <head>
+	<link href="css/styles.css" rel="stylesheet">
+	<title> Signal tester - Analyser</title>
+  </head>
+  
+  <body>
+	<div class="page">
+	  <header role="banner">
+        <h1>Signal tester</h1>
+	    <nav role="navigation">
+		
+		  <!-- WAVEFORMS BUTTON -->
+
+		  <button name="waveforms" id="waveforms"
+		    value="wavesselect" class="navbtn">
+		    Waveforms
+		  </button>
+		</nav>
+	  </header>
+		  
+      <main role="main">
+	    <article>
+		  <section>
+	
+	        <!-- LEVEL METER -->
+			  
+			<p>
+	          <fieldset><legend><b>Peak level meter (dbFS)</b></legend>
+			    <center>
+	              <div id="my-peak-meter" style="width: 8em; height:
+	                10em; margin: 1em;">
+			      </div>
+				</center>
+	          </fieldset>
+			</p>
+			
+		  </section>
+		
+		  <section>
+	
+	        <!-- OSCILLOSCOPE -->
+			
+			<p>
+	          <fieldset id="scopeCanvas">
+	            <legend><b>Oscilloscope (Volts)</b></legend>
+				<div id="center">
+				  <canvas id="scope"></canvas>
+				</div>
+	          </fieldset>
+			</p>
+			
+		  </section>
+		
+		  <section>
+	
+	        <!-- SPECTRUM ANALYSER -->
+			
+		    <p>
+	          <fieldset id="spectrumCanvas">
+	            <legend><b>Spectrum analyser (KHz)</b></legend>
+				<div id="center">
+				  <canvas id="spectrum"></canvas>
+				</div>
+	          </fieldset>
+			</p>
+			
+		  </section>
+	    </article>
+	  </main>
+	
+	  <footer role="contentinfo">
+	    <p>&copy; Lee Archer 2017</p>
+	  </footer>
+	
+	  <script src="js/webAudioPeakMeter.js"></script>
+	  <script src="js/analyser.js"></script>
+	  
+	</div>
+  </body>
+</html>
