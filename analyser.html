@@ -20,7 +20,7 @@
 		
 		  <!-- WAVEFORMS BUTTON -->
 
-		  <button name="waveforms" id="waveforms"
+		  <button name="waveforms" id="waveforms1"
 		    value="wavesselect" class="navbtn">
 		    Waveforms
 		  </button>
@@ -34,7 +34,11 @@
 	        <!-- LEVEL METER -->
 			  
 			<p>
-	          <fieldset><legend><b>Peak level meter (dbFS)</b></legend>
+	          <fieldset class="fieldsets"><legend><b>Peak level meter (dbFS)</b></legend>
+				<button name="reset" id="reset"
+				  value="reset" class="btn">
+				  Reset
+				</button>
 			    <center>
 	              <div id="my-peak-meter" style="width: 8em; height:
 	                10em; margin: 1em;">
@@ -50,7 +54,7 @@
 	        <!-- OSCILLOSCOPE -->
 			
 			<p>
-	          <fieldset id="scopeCanvas">
+	          <fieldset id="scopeCanvas" class="fieldsets">
 	            <legend><b>Oscilloscope (Volts)</b></legend>
 				<div id="center">
 				  <canvas id="scope"></canvas>
@@ -65,7 +69,7 @@
 	        <!-- SPECTRUM ANALYSER -->
 			
 		    <p>
-	          <fieldset id="spectrumCanvas">
+	          <fieldset id="spectrumCanvas" class="fieldsets">
 	            <legend><b>Spectrum analyser (KHz)</b></legend>
 				<div id="center">
 				  <canvas id="spectrum"></canvas>
@@ -78,7 +82,18 @@
 	  </main>
 	
 	  <footer role="contentinfo">
-	    <p>&copy; Lee Archer 2017</p>
+		
+		<nav role="navigation">
+
+		  <!-- WAVEFORMS BUTTON -->
+
+		  <button name="waveforms" id="waveforms2"
+			value="wavesselect" class="navbtn">
+			Waveforms
+		  </button>
+		</nav>
+		
+	    <p>&copy; Lee Archer 2018</p>
 	  </footer>
 	
 	  <script src="js/webAudioPeakMeter.js"></script>

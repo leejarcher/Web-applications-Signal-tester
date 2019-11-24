@@ -21,7 +21,7 @@
 
 		  <!-- ANALYSER BUTTON -->
           
-		  <button name="analyser" id="analyser"
+		  <button name="analyser" id="analyser1"
 		    value="analysis" class="navbtn">
 		    Analyser
 		  </button>
@@ -34,15 +34,15 @@
 	
 	        <!-- MAIN WAVEBANK -->
 	
-	        <p><fieldset><legend><b>Main Wavebank</b></legend>
+	        <p><fieldset class="fieldsets"><legend><b>Main Wavebank</b></legend>
 			
 			<button name="onButton0" id="onButton0"
 			  value="onoff" class="btn">
 		      Off
 			</button>
-		  
+			
 	          <form name="waveforms0" id="waveforms0">
-	            <fieldset><legend>Waveforms</legend>
+	            <fieldset class="radios"><legend>Waveforms</legend>
 		          <input type="radio" name="wave0" id="sin" value="sine" checked="true">
 		          <label for="sin">Sin</label>
 		          <input type="radio" name="wave0" id="tri" value="triangle">
@@ -62,22 +62,30 @@
 	            </fieldset>
 	          </form>
 	  
-	          <p><form id="frequency and output level">
-	            <fieldset><legend>Frequency/Playback rate and Output level</legend>
-		          Frequency Hz / Rate: <input type="number" name="freq0" id="freq0"
-		          min="0.1" max="20000" value="1000">
-		          <br>Output 0-10: <input type="number" name="out0" id="out0" 
-		          min="0" max="1" value="0.5">
-	            </fieldset>
-	          </form></p>
-	        </fieldset></p>
+	          <p>
+		        <form id="frequency and output level">
+	              <fieldset class="freqs"><legend>Frequency/Playback rate and Output level</legend>
+				      <label for="freq0">
+		                Frequency Hz / Rate:
+				      </label>
+				      <input type="number" name="freq0" id="freq0"
+		              min="0.1" max="20000" value="1000">
+				      <label for="out0">
+		                Output 0-10:
+				      </label>
+				      <input type="number" name="out0" id="out0" 
+		              min="0" max="1" value="0.5">
+	              </fieldset>
+				</form>
+			  </p>
+	        </fieldset>
 		  </section>
 		
 	      <section>
 		  
 	        <!-- MIX MOD WAVEBANK -->
 		
-	        <p><fieldset><legend><b>Mix Modulation Wavebank</b></legend>
+	        <p><fieldset class="fieldsets"><legend><b>Mix Modulation Wavebank</b></legend>
 			
 			<button name="onButton1" id="onButton1"
 			  value="onoff" class="btn">
@@ -85,7 +93,7 @@
 			</button>
 
 		      <form name="waveforms1" id="waveforms1">
-		        <fieldset><legend>Waveforms</legend>
+		        <fieldset class="radios"><legend>Waveforms</legend>
 			      <input type="radio" name="wave1" id="sin" value="sine" checked="true">
 			      <label for="sin">Sin</label>
 			      <input type="radio" name="wave1" id="tri" value="triangle">
@@ -107,37 +115,61 @@
 		        </fieldset>
 		      </form>
 
-		      <p><form id="frequency and output level">
-			    <fieldset><legend>Frequency/Playback rate and Output level</legend>
-			      Frequency Hz / Rate: <input type="number" name="freq1" id="freq1"
-			      min="0.1" max="20000" value="1000">
-			      <br>Output 0-10: <input type="number" name="out1" id="out1" 
-			      min="0" max="1" value="0.5">
-			    </fieldset>
-		      </form></p>
-	        </fieldset></p>
+		      <p>
+		        <form id="frequency and output level">
+	              <fieldset class="freqs"><legend>Frequency/Playback rate and Output level</legend>
+					<label for="freq1">
+					  Frequency Hz / Rate:
+					</label>
+					<input type="number" name="freq1" id="freq1"
+		              min="0.1" max="20000" value="1000">
+					<label for="out1">
+					  Output 0-10:
+					</label>
+					<input type="number" name="out1" id="out1" 
+		              min="0" max="1" value="0.5">
+	              </fieldset>
+				</form>
+			  </p>
+	        </fieldset>
 	      </section>
 	  
 	      <section>
 
 	        <!-- MIX MOD SELECTION -->
-
-	        <form name="mixMod" id="mixMod">
-	          <fieldset><legend><b>Modulation type</b></legend>
-		        <input type="radio" name="mType" id="mix" value="mix" checked="true">
-		        <label for="mix">Mix</label>
-		        <input type="radio" name="mType" id="am" value="am">
-		        <label for="am">AM</label>
-		        <input type="radio" name="mType" id="fm" value="fm">
-		        <label for="fm">FM</label>
-	          </fieldset>
-	        </form>
+            <p>
+	          <form name="mixMod" id="mixMod">
+	            <fieldset class="mix_radios"><legend><b>Modulation type</b></legend>
+		          <input type="radio" name="mType" id="mix" value="mix" checked="true">
+		          <label for="mix">Mix</label>
+		          <input type="radio" name="mType" id="am" value="am">
+		          <label for="am">AM</label>
+		          <input type="radio" name="mType" id="fm" value="fm">
+		          <label for="fm">FM</label>
+				  <input type="radio" name="mType" id="amsc" value="amsc">
+		          <label for="amsc">DSB-SC</label>
+				  <input type="radio" name="mType" id="ring" value="ring">
+		          <label for="ring">Ring</label>
+	            </fieldset>
+	          </form>
+			</p>
 	      </section>
         </article>
       </main>
-	
+	  
 	  <footer role="contentinfo">
-	    <p>&copy; Lee Archer 2017</p>
+		
+		<nav role="navigation">
+
+		  <!-- ANALYSER BUTTON -->
+
+		  <button name="analyser" id="analyser2"
+			value="analysis" class="navbtn">
+			Analyser
+		  </button>
+		</nav>
+		
+	    <p>&copy; Lee Archer 2018</p>
 	  </footer>
 		
 	  <!-- Load jQuery, jquery-csv, header, BufferLoader class and main program-->

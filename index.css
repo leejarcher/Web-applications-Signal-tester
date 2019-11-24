@@ -1,0 +1,83 @@
+article, footer, header, main, nav, section {
+  display: block;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+a {
+  background-color: LightSkyBlue;
+  border: none;
+  border-radius: 0.2em;
+  box-shadow: 0.1em 0.1em 0.1em #333;
+  color: #fff;
+  margin: 0.6em auto 0 auto;
+  padding: 0.5em 2em;
+  text-shadow: 0.06em 0.06em 0em #777;
+  text-align: center;
+  text-decoration: none;
+}
+
+small {
+  font-size: 80%;
+}
+
+img {
+  border: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font: 100%/1.2 Georgia, 
+  "Times New Roman", serif;
+  margin: 0;
+}
+
+header {
+  background-color: #e9e9e9;
+  border-radius: 10px;
+  text-align: center;
+}
+
+footer {
+  font-family:"Lato", sans-serif;
+  background-color: #e9e9e9;
+  color: Blue;
+  position: relative;
+  top: 2em;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.page {
+  margin: 0 auto;
+  max-width: 60em;
+  padding: .3125em;
+}
+
+.warning {
+  color: Red;
+  font-weight: bold;
+}
+
+h1 {
+  font-family:"Lato", sans-serif;
+  font-size: 2.25em;
+  font-weight: 300;
+  color: Red;
+}
