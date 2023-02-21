@@ -4,181 +4,185 @@
 <!-- WAVEFORMS SCREEN -->
   
 <html>
-  <meta name="viewport" content="width=device-width;
+	
+	<meta name="viewport" content="width=device-width;
 	initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
-  <body onload="scrollTo(0, 1);">
+  	<body onload="scrollTo(0, 1);">
 	
-  <head>
-	<link href="css/styles.css" rel="stylesheet">
-	<title>Signal tester - Generator</title>
-  </head> 
+	<head>
+		<link href="css/styles.css" rel="stylesheet">
+		<title>Signal tester - Generator</title>
+	</head> 
   
-  <body>
-	<div class="page">
-	  <header role="banner">
-        <h1>Signal tester</h1>
-	    <nav role="navigation">
+	<body>
+		<div class="page">
+			<header role="banner">
+        			<h1>Signal tester</h1>
+	  			<nav role="navigation">
 
-		  <!-- ANALYSER BUTTON -->
+					<!-- ANALYSER BUTTON -->
           
-		  <button name="analyser" id="analyser1"
-		    value="analysis" class="navbtn">
-		    Analyser
-		  </button>
-	    </nav>  
-	  </header>
+		  			<button name="analyser" id="analyser1"
+		    				value="analysis" class="navbtn">
+		    				Analyser
+		  			</button>
+	    			</nav>  
+	  		</header>
 	
-      <main role="main">
-	    <article>
-		  <section>
+      			<main role="main">
+	  			<article>
+		  			<section>
 	
-	        <!-- MAIN WAVEBANK -->
+	        				<!-- MAIN WAVEBANK -->
 	
-	        <p><fieldset class="fieldsets"><legend><b>Main Wavebank</b></legend>
+	        				<p>
+							<fieldset class="fieldsets"><legend><b>Main Wavebank</b></legend>
 			
-			<button name="onButton0" id="onButton0"
-			  value="onoff" class="btn">
-		      Off
-			</button>
+								<button name="onButton0" id="onButton0"
+			  						value="onoff" class="btn">
+		      							Off
+								</button>
 			
-	          <form name="waveforms0" id="waveforms0">
-	            <fieldset class="radios"><legend>Waveforms</legend>
-		          <input type="radio" name="wave0" id="sin" value="sine" checked="true">
-		          <label for="sin">Sin</label>
-		          <input type="radio" name="wave0" id="tri" value="triangle">
-		          <label for="tri">Tri</label>
-		          <input type="radio" name="wave0" id="saw" value="sawtooth">
-		          <label for="saw">Saw</label>
-		          <input type="radio" name="wave0" id="squ" value="square">
-		          <label for="squ">Squ</label>
-		          <input type="radio" name="wave0" id="cus" value="custom">
-		          <label for="cus">Cus</label>
-		          <input type="radio" name="wave0" id="whi" value="white">
-		          <label for="whi">Whi</label>
-		          <input type="radio" name="wave0" id="pin" value="pink">
-		          <label for="pin">Pin</label>
-		          <input type="radio" name="wave0" id="wav" value="wave">
-		          <label for="wav">WAV</label>
-	            </fieldset>
-	          </form>
+	          						<form name="waveforms0" id="waveforms0">
+	            							<fieldset class="radios"><legend>Waveforms</legend>
+		          							<input type="radio" name="wave0" id="sin" value="sine" checked="true">
+		          							<label for="sin">Sin</label>
+		          							<input type="radio" name="wave0" id="tri" value="triangle">
+		          							<label for="tri">Tri</label>
+		          							<input type="radio" name="wave0" id="saw" value="sawtooth">
+		          							<label for="saw">Saw</label>
+		          							<input type="radio" name="wave0" id="squ" value="square">
+		          							<label for="squ">Squ</label>
+		          							<input type="radio" name="wave0" id="cus" value="custom">
+		          							<label for="cus">Cus</label>
+		          							<input type="radio" name="wave0" id="whi" value="white">
+		          							<label for="whi">Whi</label>
+		          							<input type="radio" name="wave0" id="pin" value="pink">
+		          							<label for="pin">Pin</label>
+		          							<input type="radio" name="wave0" id="wav" value="wave">
+		          							<label for="wav">WAV</label>
+	            							</fieldset>
+	          						</form>
+						</p>
 	  
-	          <p>
-		        <form id="frequency and output level">
-	              <fieldset class="freqs"><legend>Frequency/Playback rate and Output level</legend>
-				      <label for="freq0">
-		                Frequency Hz / Rate:
-				      </label>
-				      <input type="number" name="freq0" id="freq0"
-		              min="0.1" max="20000" value="1000">
-				      <label for="out0">
-		                Output 0-10:
-				      </label>
-				      <input type="number" name="out0" id="out0" 
-		              min="0" max="1" value="0.5">
-	              </fieldset>
-				</form>
-			  </p>
-	        </fieldset>
-		  </section>
+	   							<p>
+									<form id="frequency and output level">
+	              								<fieldset class="freqs"><legend>Frequency/Playback Speed(Hz) and Output level</legend>
+				      							<label for="freq0">
+		                								Freq/Speed:
+				      							</label>
+				      							<input type="number" name="freq0" id="freq0" min="0.1" max="20000" step="0.1" value="1000">
+				      							<label for="out0">
+		                								Output -1/+1:
+				      							</label>
+				      							<input type="number" name="out0" id="out0" min="-1" max="1" step="0.01" value="0.5">
+	              								</fieldset>
+									</form>
+								</p>
+	            					</fieldset>
+		  			</section>
 		
-	      <section>
+	      				<section>
 		  
-	        <!-- MIX MOD WAVEBANK -->
+	        				<!-- MIX MOD WAVEBANK -->
 		
-	        <p><fieldset class="fieldsets"><legend><b>Mix Modulation Wavebank</b></legend>
+	        				<p>
+							<fieldset class="fieldsets"><legend><b>Mix Modulation Wavebank</b></legend>
 			
-			<button name="onButton1" id="onButton1"
-			  value="onoff" class="btn">
-			  Off
-			</button>
+								<button name="onButton1" id="onButton1"
+			  						value="onoff" class="btn">
+			  						Off
+								</button>
 
-		      <form name="waveforms1" id="waveforms1">
-		        <fieldset class="radios"><legend>Waveforms</legend>
-			      <input type="radio" name="wave1" id="sin" value="sine" checked="true">
-			      <label for="sin">Sin</label>
-			      <input type="radio" name="wave1" id="tri" value="triangle">
-			      <label for="tri">Tri</label>
-			      <input type="radio" name="wave1" id="saw" value="sawtooth">
-			      <label for="saw">Saw</label>
-			      <input type="radio" name="wave1" id="squ" value="square">
-			      <label for="squ">Squ</label>
-			      <input type="radio" name="wave1" id="cus" value="custom">
-			      <label for="cus">Cus</label>
-			      <input type="radio" name="wave1" id="whi" value="white">
-			      <label for="whi">Whi</label>
-			      <input type="radio" name="wave1" id="pin" value="pink">
-			      <label for="pin">Pin</label>
-			      <input type="radio" name="wave1" id="wav" value="wave">
-			      <label for="wav">WAV</label>
-				  <input type="radio" name="wave1" id="mic" value="microphone">
-		          <label for="mic">Mic</label>
-		        </fieldset>
-		      </form>
+		      						<form name="waveforms1" id="waveforms1">
+		        						<fieldset class="radios"><legend>Waveforms</legend>
+			      							<input type="radio" name="wave1" id="sin" value="sine" checked="true">
+			      							<label for="sin">Sin</label>
+			      							<input type="radio" name="wave1" id="tri" value="triangle">
+			      							<label for="tri">Tri</label>
+			      							<input type="radio" name="wave1" id="saw" value="sawtooth">
+			      							<label for="saw">Saw</label>
+			      							<input type="radio" name="wave1" id="squ" value="square">
+			      							<label for="squ">Squ</label>
+			      							<input type="radio" name="wave1" id="cus" value="custom">
+			      							<label for="cus">Cus</label>
+			      							<input type="radio" name="wave1" id="whi" value="white">
+			      							<label for="whi">Whi</label>
+			      							<input type="radio" name="wave1" id="pin" value="pink">
+			      							<label for="pin">Pin</label>
+			      							<input type="radio" name="wave1" id="wav" value="wave">
+			      							<label for="wav">WAV</label>
+				  						<input type="radio" name="wave1" id="mic" value="microphone">
+		          							<label for="mic">Mic</label>
+		        						</fieldset>
+		      						</form>
 
-		      <p>
-		        <form id="frequency and output level">
-	              <fieldset class="freqs"><legend>Frequency/Playback rate and Output level</legend>
-					<label for="freq1">
-					  Frequency Hz / Rate:
-					</label>
-					<input type="number" name="freq1" id="freq1"
-		              min="0.1" max="20000" value="1000">
-					<label for="out1">
-					  Output 0-10:
-					</label>
-					<input type="number" name="out1" id="out1" 
-		              min="0" max="1" value="0.5">
-	              </fieldset>
-				</form>
-			  </p>
-	        </fieldset>
-	      </section>
+		    				</p>
+								<p>
+		        						<form id="frequency and output level">
+	              								<fieldset class="freqs"><legend>Frequency/Playback Speed(Hz) and Output level</legend>
+											<label for="freq1">
+					  							Freq/Speed:
+											</label>
+											<input type="number" name="freq1" id="freq1" min="0.1" max="20000" step="0.1" value="1000">
+											<label for="out1">
+					  							Output -1/+1:
+											</label>
+											<input type="number" name="out1" id="out1" min="-1" max="1" step="0.01" value="0.5">
+	              								</fieldset>
+									</form>
+			  					</p>
+	        					</fieldset>
+	      				</section>
 	  
-	      <section>
+	      				<section>
 
-	        <!-- MIX MOD SELECTION -->
-            <p>
-	          <form name="mixMod" id="mixMod">
-	            <fieldset class="mix_radios"><legend><b>Modulation type</b></legend>
-		          <input type="radio" name="mType" id="mix" value="mix" checked="true">
-		          <label for="mix">Mix</label>
-		          <input type="radio" name="mType" id="am" value="am">
-		          <label for="am">AM</label>
-		          <input type="radio" name="mType" id="fm" value="fm">
-		          <label for="fm">FM</label>
-				  <input type="radio" name="mType" id="amsc" value="amsc">
-		          <label for="amsc">DSB-SC</label>
-				  <input type="radio" name="mType" id="ring" value="ring">
-		          <label for="ring">Ring</label>
-	            </fieldset>
-	          </form>
-			</p>
-	      </section>
-        </article>
-      </main>
+	        				<!-- MIX MOD SELECTION -->
+
+            					<p>
+	          					<form name="mixMod" id="mixMod">
+	            						
+								<fieldset class="mix_radios"><legend><b>Modulation type</b></legend>
+		          						<input type="radio" name="mType" id="mix" value="mix" checked="true">
+		          						<label for="mix">Mix</label>
+		          						<input type="radio" name="mType" id="am" value="am">
+		          						<label for="am">AM</label>
+		          						<input type="radio" name="mType" id="fm" value="fm">
+		          						<label for="fm">FM</label>
+				  					<input type="radio" name="mType" id="amsc" value="amsc">
+		          						<label for="amsc">DSB-SC</label>
+				  					<input type="radio" name="mType" id="ring" value="ring">
+		          						<label for="ring">Ring</label>
+	            						</fieldset>
+	          					</form>
+						</p>
+	      				</section>
+        			</article>
+      			</main>
 	  
-	  <footer role="contentinfo">
+	  		<footer role="contentinfo">
 		
-		<nav role="navigation">
+				<nav role="navigation">
 
-		  <!-- ANALYSER BUTTON -->
+		  			<!-- ANALYSER BUTTON -->
 
-		  <button name="analyser" id="analyser2"
-			value="analysis" class="navbtn">
-			Analyser
-		  </button>
-		</nav>
+		  			<button name="analyser" id="analyser2"
+						value="analysis" class="navbtn">
+						Analyser
+		  			</button>
+				</nav>
 		
-	    <p>&copy; Lee Archer 2018</p>
-	  </footer>
+	    			<p>&copy; Lee Archer 2018</p>
+
+	  		</footer>
 		
-	  <!-- Load jQuery, jquery-csv, header, BufferLoader class and main program-->
-	  <!--script src="js/jquery-3.2.1.js"></script>
-	  <script src="js/jquery-csv.js"></script-->
-	  <script src="js/BufferLoader.js"></script>
-	  <script src="js/header.js"></script>
-	  <script src="js/waves.js"></script>
+	  		<!-- Load jQuery, jquery-csv, header, BufferLoader class and main program-->
+	  		<!--script src="js/jquery-3.2.1.js"></script>
+	  		<script src="js/jquery-csv.js"></script-->
+	  		<script src="js/BufferLoader.js"></script>
+	  		<script src="js/header.js"></script>
+	  		<script src="js/waves.js"></script>
 	  
-	</div>
-  </body>
+		</div>
+	</body>
 </html>
